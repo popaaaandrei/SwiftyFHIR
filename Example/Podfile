@@ -1,0 +1,6 @@
+use_frameworks!
+target 'SwiftyFHIR_Tests' do
+  pod 'SwiftyFHIR', :path => '../'
+  
+  
+end
