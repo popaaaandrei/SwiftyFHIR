@@ -9,15 +9,23 @@
 /* Begin PBXBuildFile section */
 		4982869DA3FE291A66A6CA9C /* Pods_SwiftyFHIR_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFE9EB8067920EB389286B2 /* Pods_SwiftyFHIR_Tests.framework */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		75051DE322E5D4860036ED29 /* STU3 - Condition - acceptable pain.json in Resources */ = {isa = PBXBuildFile; fileRef = 75051DE122E5D2AD0036ED29 /* STU3 - Condition - acceptable pain.json */; };
+		75051DE422E5D4860036ED29 /* STU3 - Condition - wound red.json in Resources */ = {isa = PBXBuildFile; fileRef = 75051DE222E5D2AD0036ED29 /* STU3 - Condition - wound red.json */; };
+		75051DE522E5D4860036ED29 /* STU3 - Media - wound image.json in Resources */ = {isa = PBXBuildFile; fileRef = 75051DDF22E5D2AD0036ED29 /* STU3 - Media - wound image.json */; };
+		75051DE622E5D4860036ED29 /* STU3 - Observation - body temperature.json in Resources */ = {isa = PBXBuildFile; fileRef = 75051DE022E5D2AD0036ED29 /* STU3 - Observation - body temperature.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		607FACE51AFB9204008FA782 /* SwiftyFHIR_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyFHIR_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		63F4CE182C1E031CD84F88F4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		82A2B960420F590604E30F8E /* SwiftyFHIR.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SwiftyFHIR.podspec; path = ../SwiftyFHIR.podspec; sourceTree = "<group>"; };
-		92AE8B4B23A6E78E431AC5A1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		63F4CE182C1E031CD84F88F4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		75051DDF22E5D2AD0036ED29 /* STU3 - Media - wound image.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "STU3 - Media - wound image.json"; sourceTree = "<group>"; };
+		75051DE022E5D2AD0036ED29 /* STU3 - Observation - body temperature.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "STU3 - Observation - body temperature.json"; sourceTree = "<group>"; };
+		75051DE122E5D2AD0036ED29 /* STU3 - Condition - acceptable pain.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "STU3 - Condition - acceptable pain.json"; sourceTree = "<group>"; };
+		75051DE222E5D2AD0036ED29 /* STU3 - Condition - wound red.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "STU3 - Condition - wound red.json"; sourceTree = "<group>"; };
+		82A2B960420F590604E30F8E /* SwiftyFHIR.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftyFHIR.podspec; path = ../SwiftyFHIR.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		92AE8B4B23A6E78E431AC5A1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DBFE9EB8067920EB389286B2 /* Pods_SwiftyFHIR_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyFHIR_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8026A3B6FA7823DAF678D2 /* Pods-SwiftyFHIR_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyFHIR_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftyFHIR_Tests/Pods-SwiftyFHIR_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F8A13846921A754D1F5FEFD7 /* Pods-SwiftyFHIR_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyFHIR_Tests.release.xcconfig"; path = "Target Support Files/Pods-SwiftyFHIR_Tests/Pods-SwiftyFHIR_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +82,10 @@
 		607FACE91AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				75051DE122E5D2AD0036ED29 /* STU3 - Condition - acceptable pain.json */,
+				75051DE222E5D2AD0036ED29 /* STU3 - Condition - wound red.json */,
+				75051DDF22E5D2AD0036ED29 /* STU3 - Media - wound image.json */,
+				75051DE022E5D2AD0036ED29 /* STU3 - Observation - body temperature.json */,
 				607FACEA1AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -95,7 +107,6 @@
 				EE8026A3B6FA7823DAF678D2 /* Pods-SwiftyFHIR_Tests.debug.xcconfig */,
 				F8A13846921A754D1F5FEFD7 /* Pods-SwiftyFHIR_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,14 +142,10 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = XQE4586RJ8;
 						LastSwiftMigration = 0900;
-						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
 			};
@@ -147,6 +154,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -165,6 +173,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75051DE622E5D4860036ED29 /* STU3 - Observation - body temperature.json in Resources */,
+				75051DE422E5D4860036ED29 /* STU3 - Condition - wound red.json in Resources */,
+				75051DE322E5D4860036ED29 /* STU3 - Condition - acceptable pain.json in Resources */,
+				75051DE522E5D4860036ED29 /* STU3 - Media - wound image.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +287,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -320,6 +333,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -328,6 +342,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EE8026A3B6FA7823DAF678D2 /* Pods-SwiftyFHIR_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = XQE4586RJ8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -341,8 +356,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftyFHIR_Example.app/SwiftyFHIR_Example";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -350,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F8A13846921A754D1F5FEFD7 /* Pods-SwiftyFHIR_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = XQE4586RJ8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -359,8 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftyFHIR_Example.app/SwiftyFHIR_Example";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

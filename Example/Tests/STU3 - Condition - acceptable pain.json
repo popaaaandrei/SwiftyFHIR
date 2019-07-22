@@ -1,0 +1,38 @@
+{
+    "resourceType": "Condition",
+    "id": "814342d5-906b-4dea-8a18-f94eae44fbf7",
+    "clinicalStatus": "active",
+    "verificationStatus": "confirmed",
+    "category": [{
+        "coding": [{
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+            },
+            {
+                "system": "http://snomed.info/sct",
+                "code": "55607006",
+                "display": "Problem"
+            }
+        ]
+    }],
+    "code": {
+        "coding": [{
+            "system": "http://snomed.info/sct",
+            "code": "425976001",
+            "display": "Acceptable pain level"
+        }],
+        "text": "Acceptable pain level"
+    },
+    "bodySite": [{
+        "coding": [{
+            "code": "210562007",
+            "display": "Entire right knee (body structure)",
+            "system": "http://snomed.info/sct"
+        }]
+    }],
+    "subject": {
+        "reference": "Patient/example"
+    },
+    "onsetDateTime": "2012-05-24"
+}

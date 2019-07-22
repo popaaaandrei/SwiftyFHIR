@@ -1,7 +1,26 @@
 import XCTest
 import SwiftyFHIR
 
+
+enum TestError: Error {
+
+    case resourceNotFound
+}
+
+
 class Tests: XCTestCase {
+    
+    
+    /// load resource from Bundle
+    private func loadResource(_ name: String) throws -> Data {
+        let testBundle = Bundle(for: type(of: self))
+        guard let ressourceURL = testBundle.url(forResource: name, withExtension: "json") else {
+            throw TestError.resourceNotFound
+        }
+        
+        return try Data(contentsOf: ressourceURL)
+    }
+    
     
     override func setUp() {
         super.setUp()
@@ -13,16 +32,58 @@ class Tests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
+    
+    
+    func testCondition1() {
+        do {
+            let conditionJson = try loadResource("STU3 - Condition - acceptable pain")
+            let _ = try Condition(json: conditionJson)
+        }
+        catch {
+            XCTFail("\(error)")
+        }
+        
         XCTAssert(true, "Pass")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure() {
-            // Put the code you want to measure the time of here.
+    
+    func testCondition2() {
+        do {
+            let conditionJson = try loadResource("STU3 - Condition - wound red")
+            let _ = try Condition(json: conditionJson)
         }
+        catch {
+            XCTFail("\(error)")
+        }
+        
+        XCTAssert(true, "Pass")
+    }
+    
+    
+    
+    func testMedia() {
+        do {
+            let mediaJson = try loadResource("STU3 - Media - wound image")
+            let _ = try Media(json: mediaJson)
+        }
+        catch {
+            XCTFail("\(error)")
+        }
+        
+        XCTAssert(true, "Pass")
+    }
+    
+    
+    func testObservation() {
+        do {
+            let observationJson = try loadResource("STU3 - Observation - body temperature")
+            let _ = try Media(json: observationJson)
+        }
+        catch {
+            XCTFail("\(error)")
+        }
+        
+        XCTAssert(true, "Pass")
     }
     
 }
