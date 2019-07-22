@@ -1,0 +1,26 @@
+{
+    "resourceType": "Observation",
+    "id": "zib-generalmeasurement-example",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-GeneralMeasurement"
+        ]
+    },
+    "status": "final",
+    "code": {
+        "coding": [{
+            "system": "http://snomed.info/sct",
+            "code": "11021000146103",
+            "display": "Score list delirium (record artifact)"
+        }]
+    },
+    "subject": {
+        "reference": "Patient/nl-core-patient-example-1",
+        "display": "Irma Jongeneel-de Haas"
+    },
+    "effectiveDateTime": "2018-09-10",
+    "valueCodeableConcept": {
+        "text": "7"
+    },
+    "comment": "Waarschijnlijk delier"
+}

@@ -1,0 +1,55 @@
+{
+    "resourceType": "Observation",
+    "id": "medmij-bgz-bodyweight-ts-01",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-BodyWeight"
+        ]
+    },
+    "status": "final",
+    "category": [{
+        "coding": [{
+            "system": "http://hl7.org/fhir/observation-category",
+            "code": "vital-signs",
+            "display": "Vital Signs"
+        }]
+    }],
+    "code": {
+        "coding": [{
+            "system": "http://loinc.org",
+            "code": "29463-7",
+            "display": "Body weight"
+        }]
+    },
+    "subject": {
+        "reference": "Patient/medmij-bgz-patient-ts-01",
+        "display": "Johan XXX_Helleman"
+    },
+    "effectiveDateTime": "2013-02-03",
+    "performer": [{
+        "reference": "Practitioner/medmij-bgz-practitioner-ts-02",
+        "display": "Vaste Huisarts 1"
+    }],
+    "valueQuantity": {
+        "value": 72,
+        "unit": "kg",
+        "system": "http://unitsofmeasure.org",
+        "code": "kg"
+    },
+    "component": [{
+        "code": {
+            "coding": [{
+                "system": "http://loinc.org",
+                "code": "8352-7",
+                "display": "Clothing worn during measure"
+            }]
+        },
+        "valueCodeableConcept": {
+            "coding": [{
+                "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.8.1",
+                "code": "MINIMAL",
+                "display": "Minimal dressed"
+            }]
+        }
+    }]
+}

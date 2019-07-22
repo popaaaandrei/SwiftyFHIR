@@ -1,0 +1,54 @@
+{
+    "resourceType": "Observation",
+    "id": "zib-heartrate-example",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/zib-HeartRate"
+        ]
+    },
+    "status": "final",
+    "category": [{
+        "coding": [{
+            "system": "http://hl7.org/fhir/observation-category",
+            "code": "vital-signs",
+            "display": "Vital Signs"
+        }]
+    }],
+    "code": {
+        "coding": [{
+            "system": "http://loinc.org",
+            "code": "8867-4",
+            "display": "Heart rate"
+        }]
+    },
+    "subject": {
+        "reference": "Patient/example",
+        "display": "Example Patient"
+    },
+    "effectiveDateTime": "2013-02-08T06:43:00+02:00",
+    "performer": [{
+        "reference": "Practitioner/example",
+        "display": "Example Practitioner"
+    }],
+    "valueQuantity": {
+        "value": 126,
+        "unit": "/min",
+        "system": "http://unitsofmeasure.org",
+        "code": "/min"
+    },
+    "interpretation": {
+        "coding": [{
+            "system": "http://snomed.info/sct",
+            "code": "248650006",
+            "display": "Heart irregular"
+        }]
+    },
+    "comment": "Misschien bigeminie?",
+    "method": {
+        "coding": [{
+            "system": "http://snomed.info/sct",
+            "code": "37931006",
+            "display": "Auscultation"
+        }]
+    }
+}

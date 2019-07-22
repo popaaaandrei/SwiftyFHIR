@@ -1,0 +1,61 @@
+{
+    "resourceType": "Observation",
+    "id": "gp-DiagnosticResult-example-1",
+    "meta": {
+        "profile": [
+            "http://nictiz.nl/fhir/StructureDefinition/gp-DiagnosticResult"
+        ]
+    },
+    "text": {
+        "status": "generated"
+    },
+    "identifier": [{
+        "use": "official",
+        "system": "http://www.bmc.nl/zorgportal/identifiers/observations",
+        "value": "6324"
+    }],
+    "status": "final",
+    "code": {
+        "coding": [{
+            "system": "https://referentiemodel.nhg.org/tabellen/nhg-tabel-45-diagnostische-bepalingen",
+            "code": "1744",
+            "display": "systolische bloeddruk"
+        }]
+    },
+    "subject": {
+        "reference": "Patient/f001",
+        "display": "P. van de Heuvel"
+    },
+    "effectivePeriod": {
+        "start": "2013-04-02T09:30:10+01:00"
+    },
+    "issued": "2013-04-03T15:30:10+01:00",
+    "performer": [{
+        "reference": "Practitioner/f005",
+        "display": "A. Langeveld"
+    }],
+    "valueQuantity": {
+        "value": 140,
+        "system": "http://unitsofmeasure.org",
+        "code": "mm[Hg]"
+    },
+    "interpretation": {
+        "coding": [{
+            "system": "http://hl7.org/fhir/v2/0078",
+            "code": "H",
+            "display": "High"
+        }]
+    },
+    "referenceRange": [{
+        "low": {
+            "value": 100,
+            "system": "http://unitsofmeasure.org",
+            "code": "mm[Hg]"
+        },
+        "high": {
+            "value": 130,
+            "system": "http://unitsofmeasure.org",
+            "code": "mm[Hg]"
+        }
+    }]
+}

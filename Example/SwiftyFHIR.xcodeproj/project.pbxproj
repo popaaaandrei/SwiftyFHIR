@@ -13,6 +13,10 @@
 		75051DE422E5D4860036ED29 /* STU3 - Condition - wound red.json in Resources */ = {isa = PBXBuildFile; fileRef = 75051DE222E5D2AD0036ED29 /* STU3 - Condition - wound red.json */; };
 		75051DE522E5D4860036ED29 /* STU3 - Media - wound image.json in Resources */ = {isa = PBXBuildFile; fileRef = 75051DDF22E5D2AD0036ED29 /* STU3 - Media - wound image.json */; };
 		75051DE622E5D4860036ED29 /* STU3 - Observation - body temperature.json in Resources */ = {isa = PBXBuildFile; fileRef = 75051DE022E5D2AD0036ED29 /* STU3 - Observation - body temperature.json */; };
+		75051DEB22E5E0500036ED29 /* STU3 - Observation - Vital Sign Systolische bloeddruk.json in Resources */ = {isa = PBXBuildFile; fileRef = 75051DE722E5E0500036ED29 /* STU3 - Observation - Vital Sign Systolische bloeddruk.json */; };
+		75051DEC22E5E0500036ED29 /* STU3 - Observation - Score list delirium.json in Resources */ = {isa = PBXBuildFile; fileRef = 75051DE822E5E0500036ED29 /* STU3 - Observation - Score list delirium.json */; };
+		75051DED22E5E0500036ED29 /* STU3 - Observation - Heart rate.json in Resources */ = {isa = PBXBuildFile; fileRef = 75051DE922E5E0500036ED29 /* STU3 - Observation - Heart rate.json */; };
+		75051DEE22E5E0500036ED29 /* STU3 - Observation - Body weight.json in Resources */ = {isa = PBXBuildFile; fileRef = 75051DEA22E5E0500036ED29 /* STU3 - Observation - Body weight.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		75051DE022E5D2AD0036ED29 /* STU3 - Observation - body temperature.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "STU3 - Observation - body temperature.json"; sourceTree = "<group>"; };
 		75051DE122E5D2AD0036ED29 /* STU3 - Condition - acceptable pain.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "STU3 - Condition - acceptable pain.json"; sourceTree = "<group>"; };
 		75051DE222E5D2AD0036ED29 /* STU3 - Condition - wound red.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "STU3 - Condition - wound red.json"; sourceTree = "<group>"; };
+		75051DE722E5E0500036ED29 /* STU3 - Observation - Vital Sign Systolische bloeddruk.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "STU3 - Observation - Vital Sign Systolische bloeddruk.json"; sourceTree = "<group>"; };
+		75051DE822E5E0500036ED29 /* STU3 - Observation - Score list delirium.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "STU3 - Observation - Score list delirium.json"; sourceTree = "<group>"; };
+		75051DE922E5E0500036ED29 /* STU3 - Observation - Heart rate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "STU3 - Observation - Heart rate.json"; sourceTree = "<group>"; };
+		75051DEA22E5E0500036ED29 /* STU3 - Observation - Body weight.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "STU3 - Observation - Body weight.json"; sourceTree = "<group>"; };
 		82A2B960420F590604E30F8E /* SwiftyFHIR.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftyFHIR.podspec; path = ../SwiftyFHIR.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		92AE8B4B23A6E78E431AC5A1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DBFE9EB8067920EB389286B2 /* Pods_SwiftyFHIR_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyFHIR_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,10 +90,14 @@
 		607FACE91AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				75051DEA22E5E0500036ED29 /* STU3 - Observation - Body weight.json */,
+				75051DE922E5E0500036ED29 /* STU3 - Observation - Heart rate.json */,
+				75051DE822E5E0500036ED29 /* STU3 - Observation - Score list delirium.json */,
+				75051DE722E5E0500036ED29 /* STU3 - Observation - Vital Sign Systolische bloeddruk.json */,
+				75051DE022E5D2AD0036ED29 /* STU3 - Observation - body temperature.json */,
 				75051DE122E5D2AD0036ED29 /* STU3 - Condition - acceptable pain.json */,
 				75051DE222E5D2AD0036ED29 /* STU3 - Condition - wound red.json */,
 				75051DDF22E5D2AD0036ED29 /* STU3 - Media - wound image.json */,
-				75051DE022E5D2AD0036ED29 /* STU3 - Observation - body temperature.json */,
 				607FACEA1AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -173,10 +185,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75051DEE22E5E0500036ED29 /* STU3 - Observation - Body weight.json in Resources */,
 				75051DE622E5D4860036ED29 /* STU3 - Observation - body temperature.json in Resources */,
+				75051DED22E5E0500036ED29 /* STU3 - Observation - Heart rate.json in Resources */,
 				75051DE422E5D4860036ED29 /* STU3 - Condition - wound red.json in Resources */,
+				75051DEB22E5E0500036ED29 /* STU3 - Observation - Vital Sign Systolische bloeddruk.json in Resources */,
 				75051DE322E5D4860036ED29 /* STU3 - Condition - acceptable pain.json in Resources */,
 				75051DE522E5D4860036ED29 /* STU3 - Media - wound image.json in Resources */,
+				75051DEC22E5E0500036ED29 /* STU3 - Observation - Score list delirium.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
