@@ -72,7 +72,23 @@ extension String {
         if let date = __RFC3339DateFormatter.date(from: self) {
             return date
         }
-        
+
+        if let date = __ISO8601FractionalDateFormatter.date(from: self ) {
+            return date
+        }
+
+        if let date = __YYYYDateFormatter.date(from: self) {
+            return date
+        }
+
+        if let date = __YYYYMMDateFormatter.date(from: self) {
+            return date
+        }
+
+        if let date = __YYYMMDDDateFormatter.date(from: self) {
+            return date
+        }
+
         throw FHIRError.date(date: self)
     }
     
