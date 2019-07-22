@@ -1,0 +1,27 @@
+{
+  "resourceType": "Media",
+  "id": "eczema-detail-acute-minimum-metadata-media",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/images-Media"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://example-xis.org/fhir/NamingSystem/imageID",
+      "value": "1000002123"
+    }
+  ],
+  "type": "photo",
+  "subject": {
+    "reference": "Patient/xxx-baltus",
+    "display": "E XXX_Baltus"
+  },
+  "occurrenceDateTime": "2018-12-04T15:38:01+01:00",
+  "content": {
+    "contentType": "image/jpeg",
+    "url": "Binary/eczema-detail-acute-binary",
+    "size": 128000,
+    "hash": "3G+rTEx+TdWrmPJ6qqZBb2UEbQo="
+  }
+}

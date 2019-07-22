@@ -1,0 +1,18 @@
+{
+  "resourceType": "Medication",
+  "id": "81442-2-16-840-1-113883-2-4-4-10",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/zib-Product"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.4.10",
+        "code": "81442"
+      }
+    ],
+    "text": "PARACETAMOL SANDOZ TABLET 1000MG"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "resourceType": "Condition",
+  "id": "medmij-bgz-condition-ts-04",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/zib-Problem"
+    ]
+  },
+  "clinicalStatus": "active",
+  "verificationStatus": "confirmed",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "399269003",
+        "display": "Arthropathy (disorder)"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/medmij-bgz-patient-ts-01",
+    "display": "Johan XXX_Helleman"
+  },
+  "note": [
+    {
+      "text": "Beperking bij het bewegen van het gewricht, drukpijn door slijtage van twee compartimenten van de linker knie."
+    }
+  ]
+}

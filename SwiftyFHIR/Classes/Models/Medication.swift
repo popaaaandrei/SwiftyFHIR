@@ -31,8 +31,6 @@ public struct Medication: Codable, ResourceType {
     
     /// Additional content defined by implementations.
     public var `extension`: [Extension]?
-
-    /// ============== Dates ============================
     /// =================================================
 	
 	/// Codes that identify this medication.

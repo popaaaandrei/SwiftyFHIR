@@ -63,9 +63,9 @@ public struct Condition: Codable, ResourceType {
 
 
 //////////////////////////////////////////////////////
-extension Condition {
+public extension Condition {
     
-    public init(id: String = UUID().uuidString) {
+    init(id: String = UUID().uuidString) {
         self.id = id
         self.resourceType = "Condition"
     }

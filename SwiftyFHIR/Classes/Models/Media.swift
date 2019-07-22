@@ -74,9 +74,9 @@ public struct Media: Codable, ResourceType {
 
 
 //////////////////////////////////////////////////////
-extension Media {
+public extension Media {
     
-    public init(id: String = UUID().uuidString) {
+    init(id: String = UUID().uuidString) {
         self.id = id
         self.resourceType = "Media"
     }

@@ -1,0 +1,85 @@
+{
+  "resourceType": "Media",
+  "id": "eczema-detail-acute-media",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/images-Media"
+    ],
+    "security": [
+      {
+        "system": "http://hl7.org/fhir/v3/Confidentiality",
+        "code": "V",
+        "display": "very restricted",
+        "userSelected": true
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://nictiz.nl/fhir/StructureDefinition/images-recipient",
+      "valueReference": {
+        "reference": "PractitionerRole/example",
+        "display": "Vaste Huisarts 1"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://example-xis.org/fhir/NamingSystem/imageID",
+      "value": "1000002123"
+    }
+  ],
+  "type": "photo",
+  "subtype": {
+    "coding": [
+      {
+        "system": "http://dicom.nema.org/resources/ontology/DCM",
+        "code": "XC",
+        "display": "External-camera Photography"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/xxx-baltus",
+    "display": "E XXX_Baltus"
+  },
+  "occurrenceDateTime": "2018-12-04T15:38:01+01:00",
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "703938007",
+          "display": "Inflammatory dermatosis (disorder)"
+        }
+      ]
+    }
+  ],
+  "bodySite": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "7311008",
+        "display": "Anterior surface of arm"
+      }
+    ]
+  },
+  "device": {
+    "reference": "Device/example-camera",
+    "display": "Iphone 7"
+  },
+  "height": 1000,
+  "width": 662,
+  "content": {
+    "contentType": "image/jpeg",
+    "url": "Binary/eczema-detail-acute-binary",
+    "size": 128000,
+    "hash": "3G+rTEx+TdWrmPJ6qqZBb2UEbQo=",
+    "title": "Eczema close up"
+  },
+  "note": [
+    {
+      "text": "Sinds gister werd de eczeem heftiger. De zalf lijkt niet te werken. Wat denkt u?"
+    }
+  ]
+}

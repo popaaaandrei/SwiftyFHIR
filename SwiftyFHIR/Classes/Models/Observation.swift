@@ -81,9 +81,9 @@ public struct Observation: Codable, ResourceType {
 
 
 //////////////////////////////////////////////////////
-extension Observation {
+public extension Observation {
     
-    public init(id: String = UUID().uuidString) {
+    init(id: String = UUID().uuidString) {
         self.id = id
         self.resourceType = "Observation"
     }
@@ -91,32 +91,7 @@ extension Observation {
 
 
 
-//////////////////////////////////////////////////////
-public extension Observation {
-    
 
-    /// validation method
-    func validate() throws {
-        try basicResourceValidation()
-        
-        // if we have date
-        if let date = issued {
-            guard date.isFHIRInstant() else {
-                throw FHIRError.regex(input: date)
-            }
-        }
-        
-        // if we have date
-        if let date = effectiveDateTime {
-            guard date.isFHIRDateTime() else {
-                throw FHIRError.regex(input: date)
-            }
-            
-            try issued?.asFHIRDateTime()
-        }
-    }
-    
-}
 
 
 

@@ -8,7 +8,13 @@ enum TestError: Error {
 }
 
 
+
+
+
+
 class Tests: XCTestCase {
+    
+    
     
     
     /// load resource from Bundle
@@ -22,124 +28,61 @@ class Tests: XCTestCase {
     }
     
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    private func observationCheck(_ name: String) throws {
+        let observationJson = try loadResource(name)
+        let observation = try Observation(json: observationJson)
+        try observation.validate()
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    private func conditionCheck(_ name: String) throws {
+        let conditionJson = try loadResource(name)
+        let condition = try Condition(json: conditionJson)
+        try condition.validate()
+    }
+    
+    private func mediaCheck(_ name: String) throws {
+        let mediaJson = try loadResource(name)
+        let media = try Media(json: mediaJson)
+        try media.validate()
+    }
+    
+    private func medicationCheck(_ name: String) throws {
+        let medicationJson = try loadResource(name)
+        let medication = try Medication(json: medicationJson)
+        try medication.validate()
     }
     
     
-    
-    func testCondition1() {
-        do {
-            let conditionJson = try loadResource("STU3 - Condition - acceptable pain")
-            let condition = try Condition(json: conditionJson)
-            try condition.validate()
-        }
-        catch {
-            XCTFail("\(error)")
-        }
-        
-        XCTAssert(true, "Pass")
-    }
-    
-    
-    func testCondition2() {
-        do {
-            let conditionJson = try loadResource("STU3 - Condition - wound red")
-            let condition = try Condition(json: conditionJson)
-            try condition.validate()
-        }
-        catch {
-            XCTFail("\(error)")
-        }
-        
-        XCTAssert(true, "Pass")
+    func testCondition() {
+        XCTAssertNoThrow(try conditionCheck("STU3 - Condition - acceptable pain"))
+        XCTAssertNoThrow(try conditionCheck("STU3 - Condition - wound red"))
+        XCTAssertNoThrow(try conditionCheck("STU3 - Condition-example-duplicate-13"))
+        XCTAssertNoThrow(try conditionCheck("STU3 - Condition-example-duplicate-16"))
     }
     
     
     
     func testMedia() {
-        do {
-            let mediaJson = try loadResource("STU3 - Media - wound image")
-            let media = try Media(json: mediaJson)
-            try media.validate()
-        }
-        catch {
-            XCTFail("\(error)")
-        }
-        
-        XCTAssert(true, "Pass")
+        XCTAssertNoThrow(try mediaCheck("STU3 - Media - wound image"))
+        XCTAssertNoThrow(try mediaCheck("STU3 - Media-example-duplicate-2"))
+        XCTAssertNoThrow(try mediaCheck("STU3 - media-example-eczema-comprehensive-data"))
+        XCTAssertNoThrow(try mediaCheck("STU3 - media-example-eczema-minimum-data"))
+    }
+    
+    func testMedication() {
+        XCTAssertNoThrow(try medicationCheck("STU3 - Medication-example-duplicate-2"))
+        XCTAssertNoThrow(try medicationCheck("STU3 - Medication-example-duplicate-4"))
+        XCTAssertNoThrow(try medicationCheck("STU3 - Medication-example-duplicate-5"))
     }
     
     
-    func testObservation1() {
-        do {
-            let observationJson = try loadResource("STU3 - Observation - body temperature")
-            let observation = try Observation(json: observationJson)
-            try observation.validate()
-        }
-        catch {
-            XCTFail("\(error)")
-        }
-        
-        XCTAssert(true, "Pass")
+    func testObservation() {
+        XCTAssertNoThrow(try observationCheck("STU3 - Observation - Body weight"))
+        XCTAssertNoThrow(try observationCheck("STU3 - Observation - Heart rate"))
+        XCTAssertNoThrow(try observationCheck("STU3 - Observation - Score list delirium"))
+        XCTAssertNoThrow(try observationCheck("STU3 - Observation - Vital Sign Systolische bloeddruk"))
+        XCTAssertNoThrow(try observationCheck("STU3 - Observation - body temperature"))
     }
-    
-    func testObservation2() {
-        do {
-            let observationJson = try loadResource("STU3 - Observation - Body weight")
-            let observation = try Observation(json: observationJson)
-            try observation.validate()
-        }
-        catch {
-            XCTFail("\(error)")
-        }
-        
-        XCTAssert(true, "Pass")
-    }
-    
-    func testObservation3() {
-        do {
-            let observationJson = try loadResource("STU3 - Observation - Heart rate")
-            let observation = try Observation(json: observationJson)
-            try observation.validate()
-        }
-        catch {
-            XCTFail("\(error)")
-        }
-        
-        XCTAssert(true, "Pass")
-    }
-    
-    func testObservation4() {
-        do {
-            let observationJson = try loadResource("STU3 - Observation - Score list delirium")
-            let observation = try Observation(json: observationJson)
-            try observation.validate()
-        }
-        catch {
-            XCTFail("\(error)")
-        }
-        
-        XCTAssert(true, "Pass")
-    }
-    
-    func testObservation5() {
-        do {
-            let observationJson = try loadResource("STU3 - Observation - Vital Sign Systolische bloeddruk")
-            let observation = try Observation(json: observationJson)
-            try observation.validate()
-        }
-        catch {
-            XCTFail("\(error)")
-        }
-        
-        XCTAssert(true, "Pass")
-    }
+
     
 }
