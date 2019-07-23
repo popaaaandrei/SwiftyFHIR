@@ -15,6 +15,8 @@ public enum FHIRError: Error, CustomStringConvertible {
     case noId
     case regex(input: String)
     case date(date: String)
+    case notSupported(type: String)
+    case conceptNotFound(concept: String)
     
     public var description: String {
         switch self {
@@ -26,6 +28,10 @@ public enum FHIRError: Error, CustomStringConvertible {
             return "error when parsing date '\(date)'"
         case .regex(let input):
             return "could not validate regex for '\(input)'"
+        case .notSupported(let type):
+            return "Resource \(type) not supported"
+        case let .conceptNotFound(concept):
+            return "Concept '\(concept)' not found"
         }
     }
     

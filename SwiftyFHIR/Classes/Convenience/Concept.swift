@@ -71,14 +71,14 @@ public enum Concept: String, CaseIterable, CustomStringConvertible {
     }
     
     
-    public var ZIBprofile: String {
+    public var ZIBprofile: String? {
         switch self {
         case .problem:
             return "http://nictiz.nl/fhir/StructureDefinition/zib-Problem"
         case .bodyTemperature:
             return "http://nictiz.nl/fhir/StructureDefinition/zib-BodyTemperature"
         default:
-            return ""
+            return nil
         }
     }
 

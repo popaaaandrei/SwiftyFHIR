@@ -31,52 +31,50 @@ public enum 🔥 {
     case woundPicture(image: UIImage)
     #endif
     
-    /*
-    public func resource(bodySite: BodySite? = nil) -> ResourceType {
+    
+    
+    public func resource(patient: String,
+                         bodySite: BodySite? = nil,
+                         device: String? = nil) -> ResourceType {
+        
         switch self {
-        ////////////////////////////////////////////
+
         case let .painScoreObservation(value):
-            let observation = Observation.with(concept: .painScore)
-            // result quantity
+            var observation = Observation(concept: .painScore, patient: patient, bodySite: bodySite)
             observation.valueQuantity = MeasurementUnit.painScore(value: value).quantity
-            // method concept
             observation.method = Method.VAS10.concept
-            // body Site
-            observation.bodySite = bodySite?.concept
             return observation
             
         case .painAcceptable:
-            return Condition.with(concept: .painAcceptableLevel, confirmed: true)
-        case .painHeavy:
-            return Condition.with(concept: .painHeavy, confirmed: true, bodySite: bodySite)
+            return Condition(concept: .painAcceptableLevel, patient: patient, verification: .confirmed, bodySite: bodySite)
             
-        ////////////////////////////////////////////
+        case .painHeavy:
+            return Condition(concept: .painHeavy, patient: patient, verification: .confirmed, bodySite: bodySite)
+            
         case let .bodyTemperatureObservation(value):
-            let observation = Observation.with(concept: .bodyTemperature)
-            // ZIBs link
-            observation.addMeta(profileUrl: "http://nictiz.nl/fhir/StructureDefinition/zib-BodyTemperature")
-            // result quantity
+            var observation = Observation(concept: .bodyTemperature, patient: patient)
             observation.valueQuantity = MeasurementUnit.degreesCelsius(value: value).quantity
             return observation
             
         case .bodyFever:
-            return Condition.with(concept: .fever, confirmed: true)
+            return Condition(concept: .fever, patient: patient, verification: .confirmed)
 
-            
-        ////////////////
         case .woundSwelling:
-            return Condition.with(concept: .localizedSwelling, confirmed: true, bodySite: bodySite)
+            return Condition(concept: .localizedSwelling, patient: patient, verification: .confirmed, bodySite: bodySite)
+    
         case .woundSurgicalLeaking:
-            return Condition.with(concept: .woundSurgicalLeaking, confirmed: true, bodySite: bodySite)
+            return Condition(concept: .woundSurgicalLeaking, patient: patient, verification: .confirmed, bodySite: bodySite)
         case .woundRed:
-            return Condition.with(concept: .woundRed, confirmed: true, bodySite: bodySite)
+            return Condition(concept: .woundRed, patient: patient, verification: .confirmed, bodySite: bodySite)
+            
         case .woundHealing:
-            return Condition.with(concept: .woundHealing, confirmed: true, bodySite: bodySite)
+            return Condition(concept: .woundHealing, patient: patient, verification: .confirmed, bodySite: bodySite)
+            
         case let .woundPicture(image):
-            return Media.with(concept: .woundPhotography, image: image, bodySite: bodySite)
+            return Media(concept: .woundPhotography, patient: patient, image: image, bodySite: bodySite, device: device)
         }
     }
-    */
+ 
     
 }
 

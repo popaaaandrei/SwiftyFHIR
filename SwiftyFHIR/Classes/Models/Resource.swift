@@ -74,6 +74,15 @@ public struct Meta: Codable {
 }
 
 
+public extension String {
+    
+    var profileMeta: Meta {
+        return Meta(profile: self)
+    }
+    
+}
+
+
 /**
  🔥🔥🔥🔥🔥🔥🔥🔥🔥 NOT COMPLETE 🔥🔥🔥🔥🔥🔥🔥🔥🔥
  Optional Extensions Element.

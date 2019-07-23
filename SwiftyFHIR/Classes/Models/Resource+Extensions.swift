@@ -12,7 +12,7 @@ import Foundation
 public extension ResourceType {
     
     /// extract date
-    func date() throws -> Date? {
+    func __date() throws -> Date? {
         if let condition = self as? Condition {
             return try condition.onsetDateTime?.asFHIRDateTime()
         }
@@ -45,5 +45,39 @@ public extension ResourceType {
         
         return nil
     }
+    
+    /// main CodeableConcept
+    var __codeableConcept: CodeableConcept? {
+        if let code = (self as? Condition)?.code {
+            return code
+        }
+        
+        if let code = (self as? Observation)?.code {
+            return code
+        }
+        
+        if let code = (self as? Media)?.subtype {
+            return code
+        }
+        
+        return nil
+    }
+    
+    
+    /// extract Coding and match Concept
+    func __concept() throws -> Concept {
+        // take all codes
+        if let coding =  __codeableConcept?.coding {
+            for code in coding  {
+                // if we have a mapping
+                if let concept = Concept.mappings[code] {
+                    return concept
+                }
+            }
+        }
+        
+        throw FHIRError.conceptNotFound(concept: "\(String(describing: __codeableConcept))")
+    }
+    
     
 }
