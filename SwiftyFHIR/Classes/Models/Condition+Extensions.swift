@@ -46,8 +46,7 @@ public extension Condition {
     
     
     /// validation method
-    func validate() throws {
-        try basicResourceValidation()
+    func validate() throws -> Condition {
         
         // if we have date
         if let date = onsetDateTime {
@@ -57,6 +56,8 @@ public extension Condition {
             
             try date.asFHIRDateTime()
         }
+        
+        return try basicResourceValidation()
     }
     
 }

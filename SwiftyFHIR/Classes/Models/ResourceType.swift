@@ -9,6 +9,29 @@ import Foundation
 
 
 
+
+public protocol ResourceType {
+    
+    /// Logical id of this artifact.
+    var id: String { get }
+    
+    /// The type of the resource or element.
+    var resourceType: String { get }
+    
+    /// Metadata about the resource.
+    var meta: Meta? { get }
+    
+    /// Additional content defined by implementations.
+    var `extension`: [Extension]? { get }
+    
+    /// method for validation
+    func validate() throws -> Self
+    
+}
+
+
+
+
 public extension ResourceType {
     
     /// extract date

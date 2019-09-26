@@ -9,24 +9,7 @@ import Foundation
 
 
 
-public protocol ResourceType {
-    
-    /// Logical id of this artifact.
-    var id: String { get }
-    
-    /// The type of the resource or element.
-    var resourceType: String { get }
-    
-    /// Metadata about the resource.
-    var meta: Meta? { get }
-    
-    /// Additional content defined by implementations.
-    var `extension`: [Extension]? { get }
-    
-    /// method for validation
-    func validate() throws
-    
-}
+
 
 
 public struct Reference: Codable {
@@ -47,6 +30,18 @@ public struct Reference: Codable {
         self.display = display
         self.identifier = identifier
         self.reference = reference
+    }
+    
+    
+    /// returns the identifier after "Patient/"
+    public var patientIdentifier: String? {
+        // if we have a reference
+        guard let reference = reference,
+            // and includes the patient
+            let range = reference.range(of: "Patient/") else {
+            return nil
+        }
+        return String(reference[range.upperBound...])
     }
     
 }

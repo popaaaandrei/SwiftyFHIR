@@ -12,11 +12,10 @@ import Foundation
 public extension Media {
     
     
-    #if canImport(UIKit)
     /// create Medias
     init(concept: Concept,
          patient: String,
-         image: UIImage,
+         imageAttachment: Attachment,
          bodySite: BodySite? = nil,
          device: String? = nil) {
         
@@ -44,23 +43,15 @@ public extension Media {
             self.bodySite = bodySite
         }
         
-        // image size, frames
-        let scale = CGAffineTransform(scaleX: UIScreen.main.scale, y: UIScreen.main.scale)
-        let size = image.size.applying(scale)
-        self.width = Int(size.width)
-        self.height = Int(size.height)
-        self.frames = 1
-        
         // image itself
-        self.content = image.asAttachment()
+        self.content = imageAttachment
     }
-    #endif
+    
     
     
     
     /// validation method
-    func validate() throws {
-        try basicResourceValidation()
+    func validate() throws -> Media {
         
         // if we have date
         if let date = occurrenceDateTime {
@@ -70,23 +61,11 @@ public extension Media {
             
             try date.asFHIRDateTime()
         }
+        
+        return try basicResourceValidation()
     }
     
 }
 
 
-#if canImport(UIKit)
-public extension UIImage {
-    
-    func asAttachment() -> Attachment {
-        var attachment = Attachment()
-        attachment.contentType = "image/jpeg"
-        if let imageString = jpegData(compressionQuality: 1.0)?.asStringBase64() {
-            attachment.data = imageString
-        }
-        attachment.creation = __RFC3339DateFormatter.string(from: Date())
-        return attachment
-    }
-    
-}
-#endif
+

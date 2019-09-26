@@ -55,8 +55,7 @@ public extension Observation {
     
     
     /// validation method
-    func validate() throws {
-        try basicResourceValidation()
+    func validate() throws -> Observation {
         
         // if we have date
         if let date = issued {
@@ -73,6 +72,8 @@ public extension Observation {
             
             try date.asFHIRDateTime()
         }
+        
+        return try basicResourceValidation()
     }
     
 }

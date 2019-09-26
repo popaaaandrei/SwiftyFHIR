@@ -35,7 +35,7 @@ public enum 🔥 {
     
     public func resource(patient: String,
                          bodySite: BodySite? = nil,
-                         device: String? = nil) -> ResourceType {
+                         device: String? = nil) throws -> ResourceType {
         
         switch self {
 
@@ -69,9 +69,11 @@ public enum 🔥 {
             
         case .woundHealing:
             return Condition(concept: .woundHealing, patient: patient, verification: .confirmed, bodySite: bodySite)
-            
+        
+        #if canImport(UIKit)
         case let .woundPicture(image):
-            return Media(concept: .woundPhotography, patient: patient, image: image, bodySite: bodySite, device: device)
+            return try Media(concept: .woundPhotography, patient: patient, image: image, bodySite: bodySite, device: device)
+        #endif
         }
     }
  

@@ -12,18 +12,20 @@ import Foundation
 public extension ResourceType {
     
     /// validation for the basic Resource properties
-    func basicResourceValidation() throws {
+    func basicResourceValidation() throws -> Self {
         guard resourceType == "\(Self.self)" else {
             throw FHIRError.validation(message: "improper resourceType - \(resourceType)")
         }
         guard !id.isEmpty else {
             throw FHIRError.noId
         }
+        
+        return self
     }
     
     /// default implementation for validation method
-    func validate() throws {
-        try basicResourceValidation()
+    func validate() throws -> Self {
+        return try basicResourceValidation()
     }
     
 }

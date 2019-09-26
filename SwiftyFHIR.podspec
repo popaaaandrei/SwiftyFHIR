@@ -8,9 +8,9 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftyFHIR'
-  s.version          = '0.0.3'
-  s.summary          = 'FHIR Codable models for Swift 5'
-  s.description      = 'FHIR Codable models for Swift 5. All models are taken from the official Swift-FHIR repository. We also added lots of convenience methods for creating FHIR Resources and a Concepts enum.'
+  s.version          = '0.0.4'
+  s.summary          = 'FHIR Codable DSTU3 models for Swift 5'
+  s.description      = 'FHIR Codable DSTU3 models for Swift 5. All models are taken from the official Swift-FHIR repository. We also added lots of convenience methods for creating FHIR Resources and a Concepts enum.'
 
   s.homepage         = 'https://github.com/popaaaandrei/SwiftyFHIR'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }

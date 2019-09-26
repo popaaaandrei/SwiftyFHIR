@@ -17,6 +17,8 @@ public enum FHIRError: Error, CustomStringConvertible {
     case date(date: String)
     case notSupported(type: String)
     case conceptNotFound(concept: String)
+    case conversion(message: String)
+    
     
     public var description: String {
         switch self {
@@ -32,6 +34,8 @@ public enum FHIRError: Error, CustomStringConvertible {
             return "Resource \(type) not supported"
         case let .conceptNotFound(concept):
             return "Concept '\(concept)' not found"
+        case let .conversion(message):
+            return "Conversion error '\(message)'"
         }
     }
     
