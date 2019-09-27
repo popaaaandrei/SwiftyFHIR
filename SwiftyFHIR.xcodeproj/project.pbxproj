@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		75BCA678233DDB8D0060166E /* SubjectIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCA677233DDB8D0060166E /* SubjectIdentifiable.swift */; };
 		75D1CD5A233D338000549441 /* Media+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D1CD59233D338000549441 /* Media+UIKit.swift */; };
 		OBJ_53 /* BodySite.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* BodySite.swift */; };
 		OBJ_54 /* Concept+Mappings.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Concept+Mappings.swift */; };
@@ -71,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		75BCA677233DDB8D0060166E /* SubjectIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectIdentifiable.swift; sourceTree = "<group>"; };
 		75D1CD59233D338000549441 /* Media+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Media+UIKit.swift"; sourceTree = "<group>"; };
 		OBJ_10 /* Concept+Mappings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Concept+Mappings.swift"; sourceTree = "<group>"; };
 		OBJ_11 /* Concept.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concept.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				OBJ_26 /* Quantity.swift */,
 				OBJ_27 /* ResourceType.swift */,
 				OBJ_28 /* Resource.swift */,
+				75BCA677233DDB8D0060166E /* SubjectIdentifiable.swift */,
 				OBJ_29 /* Terminology.swift */,
 				OBJ_30 /* ValueSets.swift */,
 			);
@@ -190,7 +193,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -203,7 +206,6 @@
 				OBJ_46 /* SwiftyFHIR.podspec */,
 				OBJ_47 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -296,7 +298,7 @@
 				English,
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_40 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -323,6 +325,7 @@
 				OBJ_59 /* CodeableConcept.swift in Sources */,
 				OBJ_60 /* Condition+Extensions.swift in Sources */,
 				OBJ_61 /* Condition.swift in Sources */,
+				75BCA678233DDB8D0060166E /* SubjectIdentifiable.swift in Sources */,
 				OBJ_62 /* MeasurementUnit.swift in Sources */,
 				OBJ_63 /* Media+Extensions.swift in Sources */,
 				OBJ_64 /* Media.swift in Sources */,

@@ -13,7 +13,7 @@ import Foundation
  Measurements and simple assertions.
  Measurements and simple assertions made about a patient, device or other subject.
  */
-public struct Observation: Codable, ResourceType {
+public struct Observation: Codable, ResourceType, SubjectIdentifiable {
     
     /// ============= ResourceType ======================
     /// Logical id of this artifact.

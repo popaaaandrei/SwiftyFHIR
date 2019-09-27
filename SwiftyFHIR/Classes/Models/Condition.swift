@@ -13,7 +13,7 @@ import Foundation
  Detailed information about conditions, problems or diagnoses.
  A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
  */
-public struct Condition: Codable, ResourceType {
+public struct Condition: Codable, ResourceType, SubjectIdentifiable {
     
     
     /// ============= ResourceType ======================

@@ -18,6 +18,7 @@ public enum FHIRError: Error, CustomStringConvertible {
     case notSupported(type: String)
     case conceptNotFound(concept: String)
     case conversion(message: String)
+    case noPatientReference
     
     
     public var description: String {
@@ -36,6 +37,8 @@ public enum FHIRError: Error, CustomStringConvertible {
             return "Concept '\(concept)' not found"
         case let .conversion(message):
             return "Conversion error '\(message)'"
+        case .noPatientReference:
+            return "Resource needs to have a patient reference beginning with 'Patient/'"
         }
     }
     

@@ -20,6 +20,13 @@ public extension ResourceType {
             throw FHIRError.noId
         }
         
+        /// resources that have Subject property need to have a proper "Patient/" reference
+        if let identifiable = self as? SubjectIdentifiable {
+            guard let reference = identifiable.subject?.reference, reference.hasPrefix("Patient/") else {
+                throw FHIRError.noPatientReference
+            }
+        }
+        
         return self
     }
     
