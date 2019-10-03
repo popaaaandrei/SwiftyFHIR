@@ -35,71 +35,20 @@ public protocol ResourceType {
 public extension ResourceType {
     
     /// extract date
-    func __date() throws -> Date? {
-        if let condition = self as? Condition {
-            return try condition.onsetDateTime?.asFHIRDateTime()
+    func getDate() throws -> Date {
+        if let onsetDateTime = (self as? Condition)?.onsetDateTime {
+            return try onsetDateTime.asFHIRDateTime()
         }
         
-        if let observation = self as? Observation {
-            return try observation.effectiveDateTime?.asFHIRDateTime()
+        if let effectiveDateTime = (self as? Observation)?.effectiveDateTime {
+            return try effectiveDateTime.asFHIRDateTime()
         }
         
-        if let media = self as? Media {
-            return try media.occurrenceDateTime?.asFHIRDateTime()
+        if let occurrenceDateTime = (self as? Media)?.occurrenceDateTime {
+            return try occurrenceDateTime.asFHIRDateTime()
         }
         
-        return nil
-    }
-    
-    
-    /// extract body site if present
-    var __bodySite: String? {
-        if let condition = self as? Condition {
-            return condition.bodySite?.first?.coding?.first?.display
-        }
-        
-        if let observation = self as? Observation {
-            return observation.bodySite?.coding?.first?.display
-        }
-        
-        if let media = self as? Media {
-            return media.bodySite?.coding?.first?.display
-        }
-        
-        return nil
-    }
-    
-    /// main CodeableConcept
-    var __codeableConcept: CodeableConcept? {
-        if let code = (self as? Condition)?.code {
-            return code
-        }
-        
-        if let code = (self as? Observation)?.code {
-            return code
-        }
-        
-        if let code = (self as? Media)?.subtype {
-            return code
-        }
-        
-        return nil
-    }
-    
-    
-    /// extract Coding and match Concept
-    func __concept() throws -> Concept {
-        // take all codes
-        if let coding =  __codeableConcept?.coding {
-            for code in coding  {
-                // if we have a mapping
-                if let concept = Concept.mappings[code] {
-                    return concept
-                }
-            }
-        }
-        
-        throw FHIRError.conceptNotFound(concept: "\(String(describing: __codeableConcept))")
+        throw FHIRError.validation(message: "Resource '\(resourceType)', id '\(id)' does not have a valid Date field")
     }
     
     

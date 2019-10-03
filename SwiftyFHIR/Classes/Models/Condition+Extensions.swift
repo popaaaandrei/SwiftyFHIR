@@ -12,40 +12,9 @@ import Foundation
 public extension Condition {
     
     
-    /// create Condition
-    init(concept: Concept,
-         patient: String,
-         verification: ConditionVerificationStatus = .confirmed,
-         bodySite: BodySite? = nil) {
-        
-        // new Condition with random id
-        self = Condition(id: concept.rawValue + "-" + UUID().uuidString)
-        // active, verified or not
-        self.clinicalStatus = ConditionClinicalStatus.active
-        self.verificationStatus = verification
-        
-        // link to the ZIB
-        self.meta = Concept.problem.ZIBprofile?.profileMeta
-        // category
-        self.category = [Concept.problem.codeableConcept]
-        // patient reference
-        self.subject = Reference(reference: "Patient/\(patient)")
-        
-        // the time is now
-        self.onsetDateTime = __RFC3339DateFormatter.string(from: Date())
-        // pain score concept
-        self.code = concept.codeableConcept
-        
-        // body site
-        if let bodySite = bodySite?.codeableConcept {
-            self.bodySite = [bodySite]
-        }
-    }
-    
-    
-    
     
     /// validation method
+    @discardableResult
     func validate() throws -> Condition {
         
         // if we have date
