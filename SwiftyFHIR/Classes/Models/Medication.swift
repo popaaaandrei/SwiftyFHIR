@@ -16,7 +16,7 @@ Definition of a Medication.
 This resource is primarily used for the identification and definition of a medication. It covers the ingredients and the packaging for a medication.
 */
 
-public struct Medication: Codable, ResourceType {
+public struct Medication: ResourceType {
     
     
     /// ============= ResourceType ======================

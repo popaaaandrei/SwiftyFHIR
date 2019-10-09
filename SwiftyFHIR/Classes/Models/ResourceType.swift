@@ -10,7 +10,7 @@ import Foundation
 
 
 
-public protocol ResourceType {
+public protocol ResourceType: Codable {
     
     /// Logical id of this artifact.
     var id: String { get }
