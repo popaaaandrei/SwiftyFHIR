@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftyFHIR'
-  s.version          = '0.0.6'
+  s.version          = '0.0.7'
   s.summary          = 'FHIR Codable DSTU3 models for Swift 5'
   s.description      = 'FHIR Codable DSTU3 models for Swift 5. All models are taken from the official Swift-FHIR repository. We also added lots of convenience methods for creating FHIR Resources and a Concepts enum.'
 
