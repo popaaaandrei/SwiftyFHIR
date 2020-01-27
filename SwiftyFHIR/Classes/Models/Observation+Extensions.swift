@@ -46,3 +46,42 @@ public extension Observation {
     }
     
 }
+
+
+public extension ObservationComponent {
+    
+    var value: String? {
+        
+        if let valueBoolean = valueBoolean {
+            return String(describing: valueBoolean)
+        }
+        
+        if let valueCodeableConcept = valueCodeableConcept,
+            let coding = valueCodeableConcept.coding?.first {
+            return String(describing: coding.display ?? coding.code)
+        }
+        
+        if let valueDateTime = valueDateTime {
+            return valueDateTime
+        }
+        
+        if let valueInteger = valueInteger {
+            return String(describing: valueInteger)
+        }
+        
+        if let valueQuantity = valueQuantity {
+            return String(describing: valueQuantity)
+        }
+        
+        if let valueRange = valueRange {
+            return String(describing: valueRange)
+        }
+        
+        if let valueString = valueString {
+            return valueString
+        }
+        
+        return nil
+    }
+    
+}

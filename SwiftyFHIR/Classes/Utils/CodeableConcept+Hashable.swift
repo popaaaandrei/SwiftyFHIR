@@ -27,7 +27,7 @@ extension Coding: Hashable, Equatable {
 
 
 
-extension CodeableConcept: Equatable {
+extension CodeableConcept: Hashable, Equatable {
     
     public static func == (lhs: CodeableConcept, rhs: CodeableConcept) -> Bool {
         guard let codingLeft = lhs.coding, let codingRight = rhs.coding else { return false }
@@ -40,8 +40,12 @@ extension CodeableConcept: Equatable {
         return false
     }
     
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(coding)
+    }
     
 }
+
 
 
 

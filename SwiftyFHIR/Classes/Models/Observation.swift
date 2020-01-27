@@ -10,7 +10,6 @@ import Foundation
 
 /**
  🔥🔥🔥🔥🔥🔥🔥🔥🔥 NOT COMPLETE 🔥🔥🔥🔥🔥🔥🔥🔥🔥
- Measurements and simple assertions.
  Measurements and simple assertions made about a patient, device or other subject.
  */
 public struct Observation: ResourceType, SubjectIdentifiable {
@@ -87,6 +86,11 @@ public extension Observation {
         self.id = id
         self.resourceType = "Observation"
     }
+    
+    mutating func add(component: ObservationComponent) {
+        if self.component == nil { self.component = [] }
+        self.component?.append(component)
+    }
 }
 
 
@@ -138,6 +142,27 @@ public struct ObservationComponent: Codable {
     
     /// Actual component result.
     public var valueString: String?
+    
+    
+    
+    public init(code: CodeableConcept?,
+                valueBoolean: Bool? = nil,
+                valueCodeableConcept: CodeableConcept? = nil,
+                valueDateTime: String? = nil,
+                valueInteger: Int? = nil,
+                valueRange: Range? = nil,
+                valueQuantity: Quantity? = nil,
+                valueString: String? = nil) {
+        
+        self.code = code
+        self.valueBoolean = valueBoolean
+        self.valueCodeableConcept = valueCodeableConcept
+        self.valueDateTime = valueDateTime
+        self.valueInteger = valueInteger
+        self.valueRange = valueRange
+        self.valueQuantity = valueQuantity
+        self.valueString = valueString
+    }
 
 }
 

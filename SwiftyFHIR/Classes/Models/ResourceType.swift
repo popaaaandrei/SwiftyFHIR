@@ -35,7 +35,7 @@ public protocol ResourceType: Codable {
 public extension ResourceType {
     
     /// extract date
-    func getDate() throws -> Date {
+    func getDate() throws -> Date? {
         if let onsetDateTime = (self as? Condition)?.onsetDateTime {
             return try onsetDateTime.asFHIRDateTime()
         }
@@ -48,7 +48,7 @@ public extension ResourceType {
             return try occurrenceDateTime.asFHIRDateTime()
         }
         
-        throw FHIRError.validation(message: "Resource '\(resourceType)', id '\(id)' does not have a valid Date field")
+        return nil
     }
     
     

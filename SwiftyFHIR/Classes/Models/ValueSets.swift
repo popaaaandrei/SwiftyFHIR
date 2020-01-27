@@ -1,6 +1,6 @@
 //
 //  ValueSets.swift
-//  App
+//  SwiftyFHIR
 //
 //  Created by Andrei on 21/07/2019.
 //

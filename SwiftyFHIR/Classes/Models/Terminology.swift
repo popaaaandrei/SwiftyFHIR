@@ -1,6 +1,6 @@
 //
 //  Terminology.swift
-//  goclinic-ehr-iOS
+//  SwiftyFHIR
 //
 //  Created by Andrei on 19/09/2018.
 //  Copyright © 2019 GoClinic B.V. All rights reserved.
@@ -21,6 +21,7 @@ public enum Terminology {
     case ConditionVerificationStatus
     case ConditionClinicalStatus
     case DigitalMediaType
+    case OralSiteCodes
     
     
     public var oid: String {
@@ -33,6 +34,7 @@ public enum Terminology {
         case .ConditionVerificationStatus: return "2.16.840.1.113883.4.642.3.166"
         case .ConditionClinicalStatus: return "2.16.840.1.113883.4.642.3.155"
         case .DigitalMediaType: return "2.16.840.1.113883.4.642.1.326"
+        case .OralSiteCodes: return "2.16.840.1.113883.4.642.4.1152"
         }
     }
     
@@ -47,6 +49,7 @@ public enum Terminology {
         case .ConditionVerificationStatus: return "ConditionVerificationStatus"
         case .ConditionClinicalStatus: return "ConditionClinicalStatus"
         case .DigitalMediaType: return "DigitalMediaType"
+        case .OralSiteCodes: return "OralSiteCodes"
         }
     }
     
@@ -65,6 +68,8 @@ public enum Terminology {
             return "http://hl7.org/fhir/condition-clinical"
         case .DigitalMediaType:
             return "http://hl7.org/fhir/digital-media-type"
+        case .OralSiteCodes:
+            return "http://terminology.hl7.org/CodeSystem/ex-tooth"
         }
     }
     

@@ -1,6 +1,6 @@
 //
 //  Quantity.swift
-//  App
+//  SwiftyFHIR
 //
 //  Created by Andrei on 15/07/2019.
 //
@@ -41,4 +41,17 @@ public struct Quantity: Codable {
         self.value = value
     }
 
+}
+
+
+
+extension Quantity: CustomStringConvertible {
+    
+    public var description: String {
+        var text = ""
+        if let value = value { text += String(format: "%.2f", value) }
+        if let unit = unit { text += " \(unit)" }
+        return text
+    }
+    
 }
