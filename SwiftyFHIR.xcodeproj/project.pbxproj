@@ -21,13 +21,17 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		752F259D24278DA600C3B9AD /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752F259C24278DA600C3B9AD /* Patient.swift */; };
+		752F259F2427917100C3B9AD /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752F259E2427917100C3B9AD /* Address.swift */; };
+		752F25A1242792D900C3B9AD /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752F25A0242792D900C3B9AD /* Identifier.swift */; };
+		752F25A32427938000C3B9AD /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752F25A22427938000C3B9AD /* Period.swift */; };
+		752F25B52427B2DD00C3B9AD /* Patient+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752F25B42427B2DD00C3B9AD /* Patient+Extensions.swift */; };
 		75BCA678233DDB8D0060166E /* SubjectIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCA677233DDB8D0060166E /* SubjectIdentifiable.swift */; };
 		OBJ_57 /* FHIRError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* FHIRError.swift */; };
 		OBJ_58 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Attachment.swift */; };
 		OBJ_59 /* CodeableConcept.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* CodeableConcept.swift */; };
 		OBJ_60 /* Condition+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Condition+Extensions.swift */; };
 		OBJ_61 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Condition.swift */; };
-		OBJ_62 /* MeasurementUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* MeasurementUnit.swift */; };
 		OBJ_63 /* Media+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Media+Extensions.swift */; };
 		OBJ_64 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* Media.swift */; };
 		OBJ_65 /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Medication.swift */; };
@@ -67,13 +71,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		752F259C24278DA600C3B9AD /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		752F259E2427917100C3B9AD /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		752F25A0242792D900C3B9AD /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
+		752F25A22427938000C3B9AD /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
+		752F25B42427B2DD00C3B9AD /* Patient+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Patient+Extensions.swift"; sourceTree = "<group>"; };
 		75BCA677233DDB8D0060166E /* SubjectIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectIdentifiable.swift; sourceTree = "<group>"; };
 		OBJ_13 /* FHIRError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHIRError.swift; sourceTree = "<group>"; };
 		OBJ_15 /* Attachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
 		OBJ_16 /* CodeableConcept.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeableConcept.swift; sourceTree = "<group>"; };
 		OBJ_17 /* Condition+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Condition+Extensions.swift"; sourceTree = "<group>"; };
 		OBJ_18 /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
-		OBJ_19 /* MeasurementUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementUnit.swift; sourceTree = "<group>"; };
 		OBJ_20 /* Media+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Media+Extensions.swift"; sourceTree = "<group>"; };
 		OBJ_21 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		OBJ_22 /* Medication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
@@ -124,17 +132,21 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_15 /* Attachment.swift */,
+				752F259E2427917100C3B9AD /* Address.swift */,
+				752F25A22427938000C3B9AD /* Period.swift */,
 				OBJ_16 /* CodeableConcept.swift */,
 				OBJ_17 /* Condition+Extensions.swift */,
 				OBJ_18 /* Condition.swift */,
-				OBJ_19 /* MeasurementUnit.swift */,
 				OBJ_20 /* Media+Extensions.swift */,
+				752F25A0242792D900C3B9AD /* Identifier.swift */,
 				OBJ_21 /* Media.swift */,
 				OBJ_22 /* Medication.swift */,
 				OBJ_23 /* Method.swift */,
 				OBJ_24 /* Observation+Extensions.swift */,
 				OBJ_25 /* Observation.swift */,
 				OBJ_26 /* Quantity.swift */,
+				752F259C24278DA600C3B9AD /* Patient.swift */,
+				752F25B42427B2DD00C3B9AD /* Patient+Extensions.swift */,
 				OBJ_27 /* ResourceType.swift */,
 				OBJ_28 /* Resource.swift */,
 				75BCA677233DDB8D0060166E /* SubjectIdentifiable.swift */,
@@ -299,22 +311,26 @@
 				OBJ_60 /* Condition+Extensions.swift in Sources */,
 				OBJ_61 /* Condition.swift in Sources */,
 				75BCA678233DDB8D0060166E /* SubjectIdentifiable.swift in Sources */,
-				OBJ_62 /* MeasurementUnit.swift in Sources */,
 				OBJ_63 /* Media+Extensions.swift in Sources */,
 				OBJ_64 /* Media.swift in Sources */,
 				OBJ_65 /* Medication.swift in Sources */,
+				752F25B52427B2DD00C3B9AD /* Patient+Extensions.swift in Sources */,
 				OBJ_66 /* Method.swift in Sources */,
+				752F25A32427938000C3B9AD /* Period.swift in Sources */,
 				OBJ_67 /* Observation+Extensions.swift in Sources */,
 				OBJ_68 /* Observation.swift in Sources */,
 				OBJ_69 /* Quantity.swift in Sources */,
 				OBJ_70 /* ResourceType.swift in Sources */,
 				OBJ_71 /* Resource.swift in Sources */,
 				OBJ_72 /* Terminology.swift in Sources */,
+				752F259F2427917100C3B9AD /* Address.swift in Sources */,
 				OBJ_73 /* ValueSets.swift in Sources */,
 				OBJ_74 /* CodeableConcept+Hashable.swift in Sources */,
 				OBJ_75 /* DateFormatters.swift in Sources */,
 				OBJ_76 /* Utils.swift in Sources */,
 				OBJ_77 /* Validation.swift in Sources */,
+				752F25A1242792D900C3B9AD /* Identifier.swift in Sources */,
+				752F259D24278DA600C3B9AD /* Patient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,6 +25,7 @@ public protocol ResourceType: Codable {
     var `extension`: [Extension]? { get }
     
     /// method for validation
+    @discardableResult
     func validate() throws -> Self
     
 }

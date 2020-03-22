@@ -53,6 +53,13 @@ class Tests: XCTestCase {
     }
     
     
+    private func patientCheck(_ name: String) throws {
+        let patientJson = try loadResource(name)
+        let patient = try Patient(json: patientJson)
+        try patient.validate()
+    }
+    
+    
     func testCondition() {
         XCTAssertNoThrow(try conditionCheck("STU3 - Condition - acceptable pain"))
         XCTAssertNoThrow(try conditionCheck("STU3 - Condition - wound red"))
@@ -82,6 +89,13 @@ class Tests: XCTestCase {
         XCTAssertNoThrow(try observationCheck("STU3 - Observation - Score list delirium"))
         XCTAssertNoThrow(try observationCheck("STU3 - Observation - Vital Sign Systolische bloeddruk"))
         XCTAssertNoThrow(try observationCheck("STU3 - Observation - body temperature"))
+    }
+    
+
+    func testPatient() {
+        XCTAssertNoThrow(try patientCheck("STU3 - Patient - example1"))
+        XCTAssertNoThrow(try patientCheck("STU3 - Patient - example2"))
+        XCTAssertNoThrow(try patientCheck("STU3 - Patient - example3"))
     }
 
     

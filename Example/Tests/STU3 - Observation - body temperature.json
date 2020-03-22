@@ -21,6 +21,6 @@
         "value": 37
     },
     "subject": {
-        "reference": "100000003"
+        "reference": "Patient/100000003"
     }
 }

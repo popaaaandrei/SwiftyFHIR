@@ -11,7 +11,9 @@ import Foundation
 
 
 
-
+/**
+A reference from one resource to another.
+*/
 public struct Reference: Codable {
     
     /// Text alternative for the resource.
