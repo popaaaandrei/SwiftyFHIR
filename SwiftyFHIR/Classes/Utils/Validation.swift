@@ -31,6 +31,7 @@ public extension ResourceType {
     }
     
     /// default implementation for validation method
+    @discardableResult
     func validate() throws -> Self {
         return try basicResourceValidation()
     }

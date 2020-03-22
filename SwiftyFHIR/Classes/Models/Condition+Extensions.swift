@@ -30,3 +30,13 @@ public extension Condition {
     }
     
 }
+
+
+//////////////////////////////////////////////////////
+public extension Condition {
+    
+    init(id: String = UUID().uuidString) {
+        self.id = id
+        self.resourceType = String(describing: Self.self)
+    }
+}

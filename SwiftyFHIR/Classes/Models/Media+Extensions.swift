@@ -12,7 +12,6 @@ import Foundation
 public extension Media {
     
     
-    
     /// validation method
     @discardableResult
     func validate() throws -> Media {
@@ -33,3 +32,11 @@ public extension Media {
 
 
 
+//////////////////////////////////////////////////////
+public extension Media {
+    
+    init(id: String = UUID().uuidString) {
+        self.id = id
+        self.resourceType = String(describing: Self.self)
+    }
+}

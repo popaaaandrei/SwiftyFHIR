@@ -35,6 +35,7 @@ public protocol ResourceType: Codable {
 
 public extension ResourceType {
     
+    
     /// extract date
     func getDate() throws -> Date? {
         if let onsetDateTime = (self as? Condition)?.onsetDateTime {

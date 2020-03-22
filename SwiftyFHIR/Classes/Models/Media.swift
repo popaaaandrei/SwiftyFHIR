@@ -73,11 +73,3 @@ public struct Media: ResourceType, SubjectIdentifiable {
 }
 
 
-//////////////////////////////////////////////////////
-public extension Media {
-    
-    init(id: String = UUID().uuidString) {
-        self.id = id
-        self.resourceType = "Media"
-    }
-}

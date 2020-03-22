@@ -22,9 +22,7 @@ public struct Patient: ResourceType {
     public var id: String
     
     /// Resource type
-    public var resourceType: String {
-        get { return "Patient" }
-    }
+    public var resourceType: String
     
     /// Metadata about the resource.
     public var meta: Meta?

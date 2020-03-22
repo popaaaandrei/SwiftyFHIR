@@ -62,11 +62,4 @@ public struct Condition: ResourceType, SubjectIdentifiable {
 
 
 
-//////////////////////////////////////////////////////
-public extension Condition {
-    
-    init(id: String = UUID().uuidString) {
-        self.id = id
-        self.resourceType = "Condition"
-    }
-}
+

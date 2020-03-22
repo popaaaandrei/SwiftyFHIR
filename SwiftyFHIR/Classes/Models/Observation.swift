@@ -79,24 +79,6 @@ public struct Observation: ResourceType, SubjectIdentifiable {
 }
 
 
-//////////////////////////////////////////////////////
-public extension Observation {
-    
-    init(id: String = UUID().uuidString) {
-        self.id = id
-        self.resourceType = "Observation"
-    }
-    
-    mutating func add(component: ObservationComponent) {
-        if self.component == nil { self.component = [] }
-        self.component?.append(component)
-    }
-}
-
-
-
-
-
 
 
 

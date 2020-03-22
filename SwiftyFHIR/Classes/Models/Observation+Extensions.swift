@@ -48,6 +48,23 @@ public extension Observation {
 }
 
 
+//////////////////////////////////////////////////////
+public extension Observation {
+    
+    init(id: String = UUID().uuidString) {
+        self.id = id
+        self.resourceType = String(describing: Self.self)
+    }
+    
+    mutating func add(component: ObservationComponent) {
+        if self.component == nil { self.component = [] }
+        self.component?.append(component)
+    }
+}
+
+
+
+
 public extension ObservationComponent {
     
     var value: String? {
@@ -85,3 +102,4 @@ public extension ObservationComponent {
     }
     
 }
+

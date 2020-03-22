@@ -28,3 +28,14 @@ public extension Patient {
     }
     
 }
+
+
+////////////////////////////////////////////////////////
+public extension Patient {
+
+    init(id: String = UUID().uuidString) {
+        self.id = id
+        self.resourceType = String(describing: Self.self)
+    }
+
+}
