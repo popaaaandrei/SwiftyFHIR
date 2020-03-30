@@ -1,5 +1,5 @@
 PODS:
-  - SwiftyFHIR (0.1.0)
+  - SwiftyFHIR (0.0.10)
 
 DEPENDENCIES:
   - SwiftyFHIR (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SwiftyFHIR: 13697156cbf4166fd5839c30afc583ac37f418bc
+  SwiftyFHIR: 80aa16c45f83413c1792bfe466ebd158627b9432
 
 PODFILE CHECKSUM: 6dab24139a40a7f9f1b333fad9fdbe3f383043ce
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.9.1
