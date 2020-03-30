@@ -34,3 +34,15 @@ public struct Identifier: Codable {
     public var value: String?
 
 }
+
+
+
+public extension Identifier {
+
+    /// default initializer
+    init(value: String, system: String) {
+        self.value = value
+        self.system = system
+    }
+
+}

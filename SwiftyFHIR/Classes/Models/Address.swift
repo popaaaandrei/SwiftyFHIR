@@ -46,3 +46,28 @@ public struct Address: Codable {
     public var use: AddressUse?
 
 }
+
+
+public extension Address {
+    
+    /// default initializer
+    init(city: String? = nil,
+         country: String? = nil,
+         district: String? = nil,
+         line: [String]? = nil,
+         postalCode: String? = nil,
+         state: String? = nil,
+         type: AddressType? = .physical,
+         use: AddressUse? = .home) {
+        
+        self.city = city
+        self.country = country
+        self.district = district
+        self.line = line
+        self.postalCode = postalCode
+        self.state = state
+        self.type = type
+        self.use = use
+    }
+    
+}

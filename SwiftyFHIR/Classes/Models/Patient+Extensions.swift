@@ -33,6 +33,7 @@ public extension Patient {
 ////////////////////////////////////////////////////////
 public extension Patient {
 
+    /// default initializer
     init(id: String = UUID().uuidString) {
         self.id = id
         self.resourceType = String(describing: Self.self)

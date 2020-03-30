@@ -99,7 +99,34 @@ public struct HumanName: Codable {
     
     /// Identifies the purpose for this name.
     public var use: NameUse?
+    
+    
+    /// =================================================
 
+    /// default initializer
+    public init(first: String? = nil, last: String? = nil) {
+        self.family = last
+        if let first = first {
+            self.given = [first]
+        }
+    }
+
+}
+
+
+public extension HumanName {
+    
+    /// extract full name
+    var __fullName: String {
+        var text = ""
+        if let first = given?.joined(separator: " ") {
+            text += first
+        }
+        if let family = family {
+            text += family
+        }
+        return text
+    }
 }
 
 
@@ -127,7 +154,17 @@ public struct ContactPoint: Codable {
     /// The actual contact point details.
     public var value: String?
     
+    
+    /// =================================================
+
+    /// default initializer
+    public init(value: String? = nil, system: ContactPointSystem? = nil) {
+        self.value = value
+        self.system = system
+    }
+    
 }
+
 
 
 
@@ -143,5 +180,14 @@ public struct PatientCommunication: Codable {
     
     /// Language preference indicator.
     public var preferred: Bool?
+    
+    
+    /// =================================================
+
+    /// default initializer
+    public init(language: CodeableConcept? = nil, preferred: Bool? = nil) {
+        self.language = language
+        self.preferred = preferred
+    }
 
 }
