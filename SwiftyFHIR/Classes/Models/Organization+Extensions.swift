@@ -1,48 +1,25 @@
 //
-//  Patient+Extensions.swift
+//  Organization+Extensions.swift
 //  SwiftyFHIR
 //
-//  Created by Andrei on 22/03/2020.
+//  Created by Andrei on 02/04/2020.
 //
 
 import Foundation
 
 
-public extension Patient {
-    
-    
-    /// validation method
-    @discardableResult
-    func validate() throws -> Patient {
-
-        // if we have date
-        if let date = birthDate {
-            guard date.isFHIRDateTime() else {
-                throw FHIRError.regex(input: date)
-            }
-
-            try date.asFHIRDateTime()
-        }
-        
-        return try basicResourceValidation()
-    }
-    
-}
-
 
 ////////////////////////////////////////////////////////
-public extension Patient {
+public extension Organization {
 
     /// default initializer
     init(id: String = UUID().uuidString) {
         self.id = id
         self.resourceType = String(describing: Self.self)
     }
-
     
-    init(firstName: String? = nil,
-         lastName: String? = nil,
-         birthday: String? = nil,
+    
+    init(name: String? = nil,
          // address
          city: String? = nil,
          country: String? = nil,
@@ -56,7 +33,7 @@ public extension Patient {
         self.active = true
         
         /// name
-        self.name = [HumanName(first: firstName, last: lastName)]
+        self.name = name
         
         /// phone
         var contactPoints = [ContactPoint]()
@@ -77,11 +54,6 @@ public extension Patient {
                                 country: country,
                                 street: street,
                                 postalCode: postalCode)]
-        /// birthday
-        self.birthDate = birthday
     }
-    
 
 }
-
-

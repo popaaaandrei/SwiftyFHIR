@@ -70,4 +70,27 @@ public extension Address {
         self.use = use
     }
     
+    
+    /// default initializer
+    init(city: String? = nil,
+         country: String? = nil,
+         district: String? = nil,
+         street: String? = nil,
+         postalCode: String? = nil,
+         state: String? = nil,
+         type: AddressType? = .physical,
+         use: AddressUse? = .home) {
+        
+        self.city = city
+        self.country = country
+        self.district = district
+        if let street = street {
+            self.line = [street]
+        }
+        self.postalCode = postalCode
+        self.state = state
+        self.type = type
+        self.use = use
+    }
+    
 }

@@ -28,6 +28,12 @@
 		752F25AF2427B07100C3B9AD /* STU3 - Patient - example3.json in Resources */ = {isa = PBXBuildFile; fileRef = 752F25AC2427B07100C3B9AD /* STU3 - Patient - example3.json */; };
 		752F25B02427B07100C3B9AD /* STU3 - Patient - example1.json in Resources */ = {isa = PBXBuildFile; fileRef = 752F25AD2427B07100C3B9AD /* STU3 - Patient - example1.json */; };
 		752F25B12427B07100C3B9AD /* STU3 - Patient - example2.json in Resources */ = {isa = PBXBuildFile; fileRef = 752F25AE2427B07100C3B9AD /* STU3 - Patient - example2.json */; };
+		7548DE242436152A00C98ECA /* STU3 - Organization - BUMC.json in Resources */ = {isa = PBXBuildFile; fileRef = 7548DE232436152A00C98ECA /* STU3 - Organization - BUMC.json */; };
+		7548DE262436155800C98ECA /* STU3 - Organization - AUMC.json in Resources */ = {isa = PBXBuildFile; fileRef = 7548DE252436155800C98ECA /* STU3 - Organization - AUMC.json */; };
+		7548DE282436157F00C98ECA /* STU3 - Organization - ENT.json in Resources */ = {isa = PBXBuildFile; fileRef = 7548DE272436157F00C98ECA /* STU3 - Organization - ENT.json */; };
+		7548DE2A243615FA00C98ECA /* STU3 - Practitioner - 1.json in Resources */ = {isa = PBXBuildFile; fileRef = 7548DE29243615FA00C98ECA /* STU3 - Practitioner - 1.json */; };
+		7548DE2C2436160700C98ECA /* STU3 - Practitioner - 2.json in Resources */ = {isa = PBXBuildFile; fileRef = 7548DE2B2436160700C98ECA /* STU3 - Practitioner - 2.json */; };
+		7548DE2E2436161500C98ECA /* STU3 - Practitioner - 3.json in Resources */ = {isa = PBXBuildFile; fileRef = 7548DE2D2436161500C98ECA /* STU3 - Practitioner - 3.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +60,12 @@
 		752F25AC2427B07100C3B9AD /* STU3 - Patient - example3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "STU3 - Patient - example3.json"; sourceTree = "<group>"; };
 		752F25AD2427B07100C3B9AD /* STU3 - Patient - example1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "STU3 - Patient - example1.json"; sourceTree = "<group>"; };
 		752F25AE2427B07100C3B9AD /* STU3 - Patient - example2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "STU3 - Patient - example2.json"; sourceTree = "<group>"; };
+		7548DE232436152A00C98ECA /* STU3 - Organization - BUMC.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "STU3 - Organization - BUMC.json"; sourceTree = "<group>"; };
+		7548DE252436155800C98ECA /* STU3 - Organization - AUMC.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "STU3 - Organization - AUMC.json"; sourceTree = "<group>"; };
+		7548DE272436157F00C98ECA /* STU3 - Organization - ENT.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "STU3 - Organization - ENT.json"; sourceTree = "<group>"; };
+		7548DE29243615FA00C98ECA /* STU3 - Practitioner - 1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "STU3 - Practitioner - 1.json"; sourceTree = "<group>"; };
+		7548DE2B2436160700C98ECA /* STU3 - Practitioner - 2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "STU3 - Practitioner - 2.json"; sourceTree = "<group>"; };
+		7548DE2D2436161500C98ECA /* STU3 - Practitioner - 3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "STU3 - Practitioner - 3.json"; sourceTree = "<group>"; };
 		82A2B960420F590604E30F8E /* SwiftyFHIR.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftyFHIR.podspec; path = ../SwiftyFHIR.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		92AE8B4B23A6E78E431AC5A1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DBFE9EB8067920EB389286B2 /* Pods_SwiftyFHIR_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyFHIR_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +143,12 @@
 				752F25AD2427B07100C3B9AD /* STU3 - Patient - example1.json */,
 				752F25AE2427B07100C3B9AD /* STU3 - Patient - example2.json */,
 				752F25AC2427B07100C3B9AD /* STU3 - Patient - example3.json */,
+				7548DE232436152A00C98ECA /* STU3 - Organization - BUMC.json */,
+				7548DE252436155800C98ECA /* STU3 - Organization - AUMC.json */,
+				7548DE272436157F00C98ECA /* STU3 - Organization - ENT.json */,
+				7548DE29243615FA00C98ECA /* STU3 - Practitioner - 1.json */,
+				7548DE2B2436160700C98ECA /* STU3 - Practitioner - 2.json */,
+				7548DE2D2436161500C98ECA /* STU3 - Practitioner - 3.json */,
 				607FACEA1AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -220,13 +238,19 @@
 			files = (
 				75051E0322E5FAC00036ED29 /* STU3 - Medication-example-duplicate-2.json in Resources */,
 				75051DEE22E5E0500036ED29 /* STU3 - Observation - Body weight.json in Resources */,
+				7548DE262436155800C98ECA /* STU3 - Organization - AUMC.json in Resources */,
+				7548DE2C2436160700C98ECA /* STU3 - Practitioner - 2.json in Resources */,
 				75051E0522E5FAC00036ED29 /* STU3 - Condition-example-duplicate-13.json in Resources */,
 				75051E0222E5FAC00036ED29 /* STU3 - Medication-example-duplicate-4.json in Resources */,
+				7548DE242436152A00C98ECA /* STU3 - Organization - BUMC.json in Resources */,
 				752F25B12427B07100C3B9AD /* STU3 - Patient - example2.json in Resources */,
+				7548DE282436157F00C98ECA /* STU3 - Organization - ENT.json in Resources */,
+				7548DE2E2436161500C98ECA /* STU3 - Practitioner - 3.json in Resources */,
 				75051E0122E5FAC00036ED29 /* STU3 - media-example-eczema-comprehensive-data.json in Resources */,
 				75051DE622E5D4860036ED29 /* STU3 - Observation - body temperature.json in Resources */,
 				75051DED22E5E0500036ED29 /* STU3 - Observation - Heart rate.json in Resources */,
 				75051E0422E5FAC00036ED29 /* STU3 - Medication-example-duplicate-5.json in Resources */,
+				7548DE2A243615FA00C98ECA /* STU3 - Practitioner - 1.json in Resources */,
 				75051DE422E5D4860036ED29 /* STU3 - Condition - wound red.json in Resources */,
 				752F25AF2427B07100C3B9AD /* STU3 - Patient - example3.json in Resources */,
 				75051E0722E5FAC00036ED29 /* STU3 - Media-example-duplicate-2.json in Resources */,

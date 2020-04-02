@@ -1,19 +1,20 @@
 //
-//  Patient+Extensions.swift
+//  Practitioner+Extensions.swift
 //  SwiftyFHIR
 //
-//  Created by Andrei on 22/03/2020.
+//  Created by Andrei on 02/04/2020.
 //
 
 import Foundation
 
 
-public extension Patient {
+
+public extension Practitioner {
     
     
     /// validation method
     @discardableResult
-    func validate() throws -> Patient {
+    func validate() throws -> Practitioner {
 
         // if we have date
         if let date = birthDate {
@@ -31,7 +32,7 @@ public extension Patient {
 
 
 ////////////////////////////////////////////////////////
-public extension Patient {
+public extension Practitioner {
 
     /// default initializer
     init(id: String = UUID().uuidString) {
@@ -39,10 +40,10 @@ public extension Patient {
         self.resourceType = String(describing: Self.self)
     }
 
+
     
     init(firstName: String? = nil,
          lastName: String? = nil,
-         birthday: String? = nil,
          // address
          city: String? = nil,
          country: String? = nil,
@@ -50,7 +51,8 @@ public extension Patient {
          postalCode: String? = nil,
          // contact
          phone: String? = nil,
-         email: String? = nil) {
+         email: String? = nil,
+         birthday: String? = nil) {
         
         self.init()
         self.active = true
@@ -83,5 +85,3 @@ public extension Patient {
     
 
 }
-
-
