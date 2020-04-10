@@ -81,6 +81,29 @@ public extension Patient {
         self.birthDate = birthday
     }
     
+    
+    /// extract full name
+    var __fullName: String? {
+        return name?.first?.__fullName
+    }
+    
+    /// extract address
+    var __address: String? {
+        guard let address = address?.first else { return nil }
+        return String(describing: address)
+    }
+    
+    /// extract age
+    var __age: Int? {
+        guard let birthday = try? birthDate?.asFHIRDateTime() else {
+            return nil
+        }
+        
+        let interval = Date().timeIntervalSince(birthday)
+        let secondsPerDay: Double = 24 * 60 * 60
+        return Int(interval.truncatingRemainder(dividingBy: secondsPerDay * 365))
+    }
+    
 
 }
 

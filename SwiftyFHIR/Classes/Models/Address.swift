@@ -94,3 +94,34 @@ public extension Address {
     }
     
 }
+
+
+extension Address: CustomStringConvertible {
+    
+    /// extract address
+    public var description: String {
+        /// if there is a textual representation, return it
+        if let text = text { return text }
+        
+        var text = ""
+        /// Street name, number, direction & P.O. Box etc..
+        if let lines = line {
+            text += lines.joined(separator: ", ")
+        }
+        /// Name of city, town etc..
+        if let city = city {
+            text += (", " + city)
+        }
+        /// Postal code for area.
+        if let postalCode = postalCode {
+            text += (" " + postalCode)
+        }
+        /// Country (e.g. can be ISO 3166 2 or 3 letter code).
+        if let country = country {
+            text += (", " + country.capitalized)
+        }
+        
+        return text
+    }
+    
+}

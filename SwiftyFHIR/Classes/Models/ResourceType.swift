@@ -19,10 +19,10 @@ public protocol ResourceType: Codable {
     var resourceType: String { get }
     
     /// Metadata about the resource.
-    var meta: Meta? { get }
+    var meta: Meta? { get set }
     
     /// Additional content defined by implementations.
-    var `extension`: [Extension]? { get }
+    var `extension`: [Extension]? { get set }
     
     /// method for validation
     @discardableResult

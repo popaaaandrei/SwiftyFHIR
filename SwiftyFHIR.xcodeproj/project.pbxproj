@@ -31,6 +31,9 @@
 		7548DE182436122F00C98ECA /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7548DE172436122F00C98ECA /* Organization.swift */; };
 		7548DE1A243612D800C98ECA /* Organization+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7548DE19243612D800C98ECA /* Organization+Extensions.swift */; };
 		75BCA678233DDB8D0060166E /* SubjectIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCA677233DDB8D0060166E /* SubjectIdentifiable.swift */; };
+		75DEA2622440AC3D008A32BB /* Contactable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DEA25F2440AC3C008A32BB /* Contactable.swift */; };
+		75DEA2632440AC3D008A32BB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DEA2602440AC3D008A32BB /* Extension.swift */; };
+		75DEA2642440AC3D008A32BB /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DEA2612440AC3D008A32BB /* Identifiable.swift */; };
 		OBJ_57 /* FHIRError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* FHIRError.swift */; };
 		OBJ_58 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Attachment.swift */; };
 		OBJ_59 /* CodeableConcept.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* CodeableConcept.swift */; };
@@ -85,6 +88,9 @@
 		7548DE172436122F00C98ECA /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		7548DE19243612D800C98ECA /* Organization+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Organization+Extensions.swift"; sourceTree = "<group>"; };
 		75BCA677233DDB8D0060166E /* SubjectIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectIdentifiable.swift; sourceTree = "<group>"; };
+		75DEA25F2440AC3C008A32BB /* Contactable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contactable.swift; sourceTree = "<group>"; };
+		75DEA2602440AC3D008A32BB /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		75DEA2612440AC3D008A32BB /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		OBJ_13 /* FHIRError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHIRError.swift; sourceTree = "<group>"; };
 		OBJ_15 /* Attachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
 		OBJ_16 /* CodeableConcept.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeableConcept.swift; sourceTree = "<group>"; };
@@ -141,6 +147,9 @@
 			children = (
 				OBJ_15 /* Attachment.swift */,
 				752F259E2427917100C3B9AD /* Address.swift */,
+				75DEA25F2440AC3C008A32BB /* Contactable.swift */,
+				75DEA2602440AC3D008A32BB /* Extension.swift */,
+				75DEA2612440AC3D008A32BB /* Identifiable.swift */,
 				752F25A22427938000C3B9AD /* Period.swift */,
 				OBJ_16 /* CodeableConcept.swift */,
 				OBJ_17 /* Condition+Extensions.swift */,
@@ -324,7 +333,9 @@
 				OBJ_60 /* Condition+Extensions.swift in Sources */,
 				OBJ_61 /* Condition.swift in Sources */,
 				75BCA678233DDB8D0060166E /* SubjectIdentifiable.swift in Sources */,
+				75DEA2632440AC3D008A32BB /* Extension.swift in Sources */,
 				OBJ_63 /* Media+Extensions.swift in Sources */,
+				75DEA2622440AC3D008A32BB /* Contactable.swift in Sources */,
 				OBJ_64 /* Media.swift in Sources */,
 				OBJ_65 /* Medication.swift in Sources */,
 				7548DE1424360D0000C98ECA /* Practitioner.swift in Sources */,
@@ -334,6 +345,7 @@
 				7548DE1A243612D800C98ECA /* Organization+Extensions.swift in Sources */,
 				OBJ_67 /* Observation+Extensions.swift in Sources */,
 				OBJ_68 /* Observation.swift in Sources */,
+				75DEA2642440AC3D008A32BB /* Identifiable.swift in Sources */,
 				OBJ_69 /* Quantity.swift in Sources */,
 				OBJ_70 /* ResourceType.swift in Sources */,
 				OBJ_71 /* Resource.swift in Sources */,

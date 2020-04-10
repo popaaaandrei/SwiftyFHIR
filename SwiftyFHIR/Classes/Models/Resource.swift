@@ -80,52 +80,6 @@ public extension String {
 }
 
 
-/**
- 🔥🔥🔥🔥🔥🔥🔥🔥🔥 NOT COMPLETE 🔥🔥🔥🔥🔥🔥🔥🔥🔥
- Optional Extensions Element.
- 
- Optional Extension Element - found in all resources.
- */
-public struct Extension: Codable {
-    
-    /// identifies the meaning of the extension.
-    public var url: String?
-    
-    /// Value of extension.
-    public var valueBoolean: Bool?
-    
-    /// Value of extension.
-    public var valueCanonical: String?
-    
-    /// Value of extension.
-    public var valueCode: String?
-    
-    /// Value of extension.
-    public var valueCodeableConcept: CodeableConcept?
-    
-    /// Value of extension.
-    public var valueCoding: Coding?
-    
-    /// Value of extension.
-    public var valueDecimal: Double?
-    
-    /// Value of extension.
-    public var valueInteger: Int?
-    
-    /// Value of extension.
-    public var valueQuantity: Quantity?
-    
-    /// Value of extension.
-    public var valueReference: Reference?
-    
-    /// Value of extension.
-    public var valueString: String?
-    
-    /// Value of extension.
-    public var valueUrl: String?
-    
-}
-
 
 /**
  Set of values bounded by low and high.

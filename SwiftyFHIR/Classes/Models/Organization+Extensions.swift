@@ -55,5 +55,12 @@ public extension Organization {
                                 street: street,
                                 postalCode: postalCode)]
     }
+    
+    
+    /// extract address
+    var __address: String? {
+        guard let address = address?.first else { return nil }
+        return String(describing: address)
+    }
 
 }
