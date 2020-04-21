@@ -95,5 +95,16 @@ public extension Practitioner {
         return String(describing: address)
     }
     
+    /// extract age
+    var __age: Int? {
+        guard let birthday = try? birthDate?.asFHIRDateTime() else {
+            return nil
+        }
+        
+        let interval = Date().timeIntervalSince(birthday)
+        let secondsPerYear: Double = 24 * 60 * 60 * 365
+        return Int(interval / secondsPerYear)
+    }
+    
 
 }

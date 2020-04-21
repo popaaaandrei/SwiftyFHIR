@@ -123,9 +123,9 @@ public extension HumanName {
             text += first
         }
         if let family = family {
-            text += family
+            text += " " + family
         }
-        return text
+        return text.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 }
 

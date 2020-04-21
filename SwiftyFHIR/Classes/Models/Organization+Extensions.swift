@@ -53,7 +53,8 @@ public extension Organization {
         self.address = [Address(city: city,
                                 country: country,
                                 street: street,
-                                postalCode: postalCode)]
+                                postalCode: postalCode,
+                                use: .work)]
     }
     
     

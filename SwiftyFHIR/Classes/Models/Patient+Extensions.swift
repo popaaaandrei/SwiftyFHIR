@@ -100,8 +100,8 @@ public extension Patient {
         }
         
         let interval = Date().timeIntervalSince(birthday)
-        let secondsPerDay: Double = 24 * 60 * 60
-        return Int(interval.truncatingRemainder(dividingBy: secondsPerDay * 365))
+        let secondsPerYear: Double = 24 * 60 * 60 * 365
+        return Int(interval / secondsPerYear)
     }
     
 

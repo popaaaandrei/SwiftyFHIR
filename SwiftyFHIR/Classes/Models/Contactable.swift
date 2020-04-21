@@ -25,7 +25,7 @@ public protocol Contactable {
 public extension Contactable where Self : ResourceType {
     
     func get(contact: ContactPointSystem) -> String? {
-        return telecom?.first(where: {$0.system == .phone})?.value
+        return telecom?.first(where: { $0.system == contact })?.value
     }
     
     mutating func set(contact system: ContactPointSystem, value: String) {
